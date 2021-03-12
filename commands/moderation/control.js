@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 
 
 module.exports = {
-    name: "unvalid",
+    name: "control",
     category: "moderation",
     run: async (client, message, args) => {
 
@@ -17,7 +17,7 @@ module.exports = {
         }
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
        
-        if (!member) return message.reply("```❌| !unvalid <mention> <Raison.s avec détails> ou <réponse auto> ```"); const reason = args.slice(1).join(" ") || ` Suite à votre demande d'adhésion, nous avons des doutes sur votre formulaire .  Nous vous demandons de prendre contact avec la modération ou de vous rendre dans le salon dédiée dans les délai d'une heure, passé ce délai, vous serez exclu.e du serveur. `;
+        if (!member) return message.reply("```❌| !control <mention> <Raison.s avec détails> ou <réponse auto> ```"); const reason = args.slice(1).join(" ") || ` Suite à votre demande d'adhésion, nous avons des doutes sur votre formulaire .  Nous vous demandons de prendre contact avec la modération ou de vous rendre dans le salon dédiée dans les délai d'une heure, passé ce délai, vous serez exclu.e du serveur. `;
         if (member.roles.cache.find(r => r.id === "650812483401154580")) {
         
 
@@ -38,7 +38,7 @@ module.exports = {
         .setThumbnail("https://cdn.discordapp.com/attachments/655265319606157322/774052492484804618/5a81af7d9123fa7bcc9b0793.png")
         .addField("👮 | mod:", "\`\`\`" + message.author.username + "\`\`\`",false)
        .setDescription("\`\`\` Remarque:     " + reason + "\`\`\`")
-       .addField("**🔎Veuillez vous rendre sur ce salon**", "```🔒obligatoire``` [clique ici](https://discord.gg/ztWEvcNnSC)",false)
+       .addField("**🔎Veuillez vous rendre sur ce salon**", "```🔒obligatoire``` [🔒🔎-contrôle](https://discord.gg/ztWEvcNnSC)",false)
        .setTimestamp()
        .setFooter("Nat'Secure")
 

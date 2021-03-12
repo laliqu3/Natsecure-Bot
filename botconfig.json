@@ -1,7 +1,7 @@
 {
     
     "token" :  "token",
-    "prefix" : "prefix",
+    "prefix" : "!",
     "ownerID": "Onwner ID"
 
 

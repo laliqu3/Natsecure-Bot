@@ -1,16 +1,24 @@
 const { MessageEmbed } = require('discord.js')
-
+const fs = require('fs');
 
 module.exports = {
     name: "valid", //valid1
     category: "moderation",
     run: async (client, message, args) => {
 
+        var Text = fs.readFileSync("Storage/Text1.txt", "utf8");
+
+        const moment = require("moment");
+require("moment-duration-format");
+
+
+
+
 
         var Err1 = new MessageEmbed()
         .setColor("RED")
         .setTitle('Erreur')
-        .setDescription("Exemple: !valid1 <@mention> [Junior/Adult]")
+        .setDescription("Exemple: !valid1 <@mention>")
         .setFooter("Nat'secure")
         .setTimestamp()
 
@@ -45,9 +53,30 @@ module.exports = {
     .setColor("GREEN")
         .setTitle("Demande d'adhésion accepté.e")
         .setThumbnail("https://cdn.discordapp.com/attachments/659932537610698772/669390815591661598/2339863-valid-policy-certificate-management-icon-with-png-and-vector-valid-png-512_512_preview.png")
-       .setDescription("\`\`\` Votre demande d'adhésion vient d'être validé.e par la modération \`\`\`")
+       .setDescription("\`\`\` Votre demande d'adhésion vient d'être validé.e par la modération // Je vous invite à ajouter vos rôles pour qu'on vous identifie correctement (obligatoire), vous pouvez changer la couleur de votre pseudo, de vous présenter ou de paramètrer les notifications (falcutatives) \`\`\`")
+       .addField("**🌸 Ajouter vos rôles **", "```🔴Obligatoire``` [🔧-role-menu](https://discord.gg/VtbUMXU6Xw)",false)
+       .addField("**🎨 Changer la couleur de votre pseudo**", "```🟢Facultative``` [🔧-couleurs](https://discord.gg/9CFex3Tmy8)",false)
+       .addField("**🎤 Présentez vous**", "```🟢Facultative``` [📝-présentations](https://discord.gg/J3x3brcbjG)",false)
+       .addField("**🔔 Notifications interne**", "```🟢Facultative``` [🔧-notifications](https://discord.gg/tw2Mq4dn3V)",false)
        .setTimestamp()
        .setFooter("Nat'Secure")
+
+       var embed55 = new MessageEmbed()
+       .setColor("PURPLE")
+           .setTitle("Conseils pour s'intégrer sur ce serveur")
+           .setThumbnail("https://cdn.discordapp.com/attachments/659932537610698772/819751883777376276/pngaaa.com-1223189.png")
+          .setDescription("\`\`\`" + Text + "\`\`\`")
+          .setFooter("Nat'Secure")
+
+
+
+       var ewelcome = new MessageEmbed()
+    .setTitle("Nouveau membre !")
+    .setColor("GREEN")
+    .setDescription("\`\`\` Je vous souhaite la bienvenue  " + member.user.username + "  !\`\`\`")
+    .setThumbnail(member.user.displayAvatarURL())
+    .setTimestamp()
+    .setFooter("souhaitez lui la bienvenue :)")
 
     
 
@@ -69,9 +98,11 @@ module.exports = {
 //controle 819545008989536277
 //adulte 777298779522334740
 //salon générale
-  channel2.send("\`\`\`✅ Nat'secure | L'utilisateur'ice: [ " + member.user.username + " ] est entré dans le serveur souhaitez lui la bienvenue :) \`\`\`", );
+  channel2.send(ewelcome);
+  //"\`\`\`✅ Nat'secure | L'utilisateur'ice: [ " + member.user.username + " ] est entré dans le serveur souhaitez lui la bienvenue :) \`\`\`", 
   channel.send(embed);
   member.send(embed2)
+  member.send(embed55)
 
  
   
