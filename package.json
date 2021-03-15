@@ -1,6 +1,6 @@
 {
-  "name": "Transcom - Nat'secure",
-  "version": "1.0.0",
+  "name": "Transcom_Nat'secure",
+  "version": "10.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,25 +12,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.3.3",
     "axios": "^0.20.0",
     "common-tags": "^1.8.0",
-    "deepmerge-json": "^1.1.0",
-    "discord-giveaways": "^4.2.1",
     "discord.js": "^12.4.1",
-    "ffmpeg": "0.0.4",
-    "ffmpeg-static": "^4.2.7",
-    "fluent-ffmpeg": "^2.1.2",
     "fs": "0.0.1-security",
-    "js-code-generator": "^1.0.1",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "ms": "^2.1.2",
     "node-gyp": "^7.1.2",
     "pm2": "^4.4.0",
-    "weather-js": "^2.0.0",
-    "yt-search": "^2.3.3",
-    "ytdl-core": "^4.0.1"
+    "weather-js": "^2.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

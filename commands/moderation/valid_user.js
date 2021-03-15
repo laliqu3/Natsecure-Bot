@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 const fs = require('fs');
 
 module.exports = {
-    name: "valid", //valid1
+    name: "valid",
     category: "moderation",
     run: async (client, message, args) => {
 
@@ -54,10 +54,10 @@ require("moment-duration-format");
         .setTitle("Demande d'adhésion accepté.e")
         .setThumbnail("https://cdn.discordapp.com/attachments/659932537610698772/669390815591661598/2339863-valid-policy-certificate-management-icon-with-png-and-vector-valid-png-512_512_preview.png")
        .setDescription("\`\`\` Votre demande d'adhésion vient d'être validé.e par la modération // Je vous invite à ajouter vos rôles pour qu'on vous identifie correctement (obligatoire), vous pouvez changer la couleur de votre pseudo, de vous présenter ou de paramètrer les notifications (falcutatives) \`\`\`")
-       .addField("**🌸 Ajouter vos rôles **", "```🔴Obligatoire``` [🔧-role-menu](https://discord.gg/VtbUMXU6Xw)",false)
-       .addField("**🎨 Changer la couleur de votre pseudo**", "```🟢Facultative``` [🔧-couleurs](https://discord.gg/9CFex3Tmy8)",false)
-       .addField("**🎤 Présentez vous**", "```🟢Facultative``` [📝-présentations](https://discord.gg/J3x3brcbjG)",false)
-       .addField("**🔔 Notifications interne**", "```🟢Facultative``` [🔧-notifications](https://discord.gg/tw2Mq4dn3V)",false)
+       .addField("**🌸 Ajouter vos rôles **", "```🔴Obligatoire``` [🔧-role-menu](https://discord.com/channels/650808518538035235/776477728806273074/776482293044740106)",false)
+       .addField("**🎨 Changer la couleur de votre pseudo**", "```🟢Facultative``` [🔧-couleurs](https://discord.com/channels/650808518538035235/776490248472494080/776501701439914025)",false)
+       .addField("**🎤 Présentez vous**", "```🟢Facultative``` [📝-présentations](https://discord.com/channels/650808518538035235/656348291037921280)",false)
+       .addField("**🔔 Notifications interne**", "```🟢Facultative``` [🔧-notifications](https://discord.com/channels/650808518538035235/778650504251047967/796576084778942485)",false)
        .setTimestamp()
        .setFooter("Nat'Secure")
 

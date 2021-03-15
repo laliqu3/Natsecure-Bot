@@ -13,28 +13,7 @@ moment.locale('fr');
 
 module.exports = async (member) => {
 
-  let ipBannedMembers = fs.existsSync('./ipBannedMembers.json') ? JSON.parse(fs.readFileSync('./ipBannedMembers.json', 'utf-8')) : {};
 
-  if (String(member.id) in ipBannedMembers){
-    const channel = member.guild.channels.cache.find(ch => ch.id === '655192033568358422');
- 
-    member.ban({days: 0, reason: ipBannedMembers[String(member.id)]})
-      .catch(console.error);
-
-      var embed1 = new MessageEmbed()
-  .setColor("GREEN")
-  .setAuthor("Arrivée ","https://cdn.discordapp.com/attachments/548696423663927306/548696861670899733/411826733785022464.png")
-  .setThumbnail("https://cdn.discordapp.com/attachments/548696423663927306/667498433103396883/userjoin.png")
-  .addField("**👩 | Pseudo:**", "\`\`\`" + member.user.username + "\`\`\`", true)
-  .addField("**🔎|Identifiant :**", "\`\`\`" + member.user.id + "\`\`\`", true)
-  .addField("**📌 | Membre N°: **","\`\`\`" + member.guild.memberCount + "\`\`\`", true)
-  .addField("**❓ | Remarque : **","\`\`\`❌ | L'utilisateur'ice: " + member.user.username + " est sur la liste des indésirables // L'utilisateur'ice est ban du serveur.\`\`\`", false)
-
-
- 
-    channel.send(embed1) 
-    return;
-  }
 
   const channel = member.guild.channels.cache.find(ch => ch.name === '655192033568358422');
  
@@ -77,10 +56,8 @@ module.exports = async (member) => {
 
 
   let role1 = member.guild.roles.cache .find(r => r.id === "650812483401154580");
-  let role2 = member.guild.roles.cache .find(r => r.id === "777345962900193281");
-  member.roles.add(role1);
-  member.roles.add(role2);
 
+  member.roles.add(role1);
 
 
 
